@@ -3,18 +3,18 @@ personal study note made by polynote.
 
 On Windows 10 terminal, try use realpath billow method
 
+run.bat
 ```shell script
-docker run --rm -it 
--p 127.0.0.1:8192:8192 
--p 127.0.0.1:4040-4050:4040-4050 
--v c:/Users/user/WebstormProjects/leran-data-things/config.yml:/opt/config/config.yml 
--v c:/Users/user/WebstormProjects/leran-data-things/notebooks:/opt/notebooks/ polynote/polynote:latest 
+docker run --rm -it ^
+-p 127.0.0.1:8192:8192 ^
+-p 127.0.0.1:4040-4050:4040-4050 ^
+-v %cd%/config.yml:/opt/config/config.yml ^
+-v %cd%/notebooks:/opt/notebooks/ polynote/polynote:latest ^
 --config /opt/config/config.yml
 ```
 
-```shell
-leran-data-things>docker run --rm -it -p 127.0.0.1:8192:8192 -p 127.0.0.1:4040-4050:4040-4050 -v C:/Users/JH/IdeaProjects/leran-data-things/config.yml:/opt/config/c
-onfig.yml -v C:/Users/JH/IdeaProjects/leran-data-things/notebooks:/opt/notebooks/ polynote/polynote:latest --config /opt/config/config.yml
+```shell script
+docker run --rm -it -p 127.0.0.1:8192:8192 -p 127.0.0.1:4040-4050:4040-4050 -v C:/Users/JH/IdeaProjects/leran-data-things/config.yml:/opt/config/config.yml -v C:/Users/JH/IdeaProjects/leran-data-things/notebooks:/opt/notebooks/ polynote/polynote:latest --config /opt/config/config.yml
 ```
 
 instead of official way.
